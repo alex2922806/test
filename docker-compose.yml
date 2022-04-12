@@ -1,0 +1,19 @@
+version: "3"
+services:
+  backend:
+    build:
+      dockerfile: etc/docker/php/Dockerfile
+      context: .
+    environment:
+      PHP_IDE_CONFIG: "serverName=cli.dev.website"
+    networks:
+      - app_net
+    volumes:
+      - .:/app
+    ports:
+      - "80:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  app_net:

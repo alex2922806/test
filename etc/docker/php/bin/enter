@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+[[ "${DEBUG}" = "true" ]] && set -x
+
+sleep infinity
+
+composer install -o -vvv -n || true
+
+./bin/console doc:mig:mig -n
+
+symfony serve --dir=. --no-tls --allow-http --document-root=public/ || while true; do sleep 1;done
