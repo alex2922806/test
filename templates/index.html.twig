@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        label, input, textarea, button {
+            display: block;
+            margin-top: 5px;
+        }
+        input, textarea {
+            width: 100%;
+        }
+        button {
+            width: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/create">
+        <label for="title">title
+            <input name="title" type="text" value="test">
+        </label>
+        <label for="description"> description
+            <textarea name="description">test</textarea>
+        </label>
+        <label for="author"> author
+            <input name="author" type="text" value="test">
+        </label>
+        <button>send</button>
+    </form>
+</body>
+</html>
