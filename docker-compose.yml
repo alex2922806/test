@@ -18,17 +18,5 @@ services:
       - 8.8.4.4
     extra_hosts:
       - "host.docker.internal:host-gateway"
-
-  database:
-    image: postgres:13-alpine
-    environment:
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: database
-      POSTGRES_USER: user
-    networks:
-      - app_net
-    ports:
-      - "5432:5432"
-
 networks:
   app_net:
