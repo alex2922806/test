@@ -1,0 +1,19 @@
+index:
+    methods: GET
+    path: /
+    controller: App\Controller\EntityController::index
+
+create:
+    methods: POST
+    path: /create
+    controller: App\Controller\EntityController::create
+
+list:
+    methods: GET
+    path: /list
+    controller: App\Controller\EntityController::list
+
+download:
+    methods: GET
+    path: /download
+    controller: App\Controller\EntityController::download

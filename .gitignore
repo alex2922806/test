@@ -8,3 +8,4 @@
 /public/bundles/
 /var/
 /vendor/
+###< symfony/framework-bundle ###
